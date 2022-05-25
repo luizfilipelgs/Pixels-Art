@@ -37,10 +37,19 @@
 }
 
 .pixel{
-    background-color: green;
+    background-color: white;
     height: 40px;
     width: 40px;
     display: inline-block;
     border: 1px solid black ;
-
+    float: left;
+  
+}
+#pixel-board{
+   
+    /*  */height: 210px;
+    width: 210px; 
+    display: inline-block ;
+    border: 1px solid blue
+    
 }
