@@ -1,3 +1,7 @@
+let preto = document.getElementById("preto");
+preto.classList.add( "selected");
+
+window.onload = function () {
 
 
 function criarGrid(larguraGrid,alturaGrid ) {
@@ -6,7 +10,7 @@ function criarGrid(larguraGrid,alturaGrid ) {
         let linha = document.createElement("div")
         document.getElementById("pixel-board").appendChild(linha)
         linha.classList = "pixel"
-        for (let i2 = 0; i2 < alturaGrid; i2 += 1) {
+        for (let i2 = 1; i2 < alturaGrid; i2 += 1) {
             let coluna = document.createElement("div")
             document.getElementById("pixel-board").appendChild(coluna)
             coluna.classList = "pixel"
@@ -15,3 +19,4 @@ function criarGrid(larguraGrid,alturaGrid ) {
     }
 }
 criarGrid(5,5)
+}
