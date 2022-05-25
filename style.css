@@ -1,0 +1,46 @@
+#title{
+    text-align: center;
+}
+
+/* #color-palette{
+    display: inline-block;
+    
+} */
+#preto {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid black ;
+}
+#cinza{
+    background-color: gray;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid black ;
+}
+#vermelho{
+    background-color: red;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid black ;
+}
+#verde{
+    background-color: green;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid black ;
+    
+}
+
+.pixel{
+    background-color: green;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid black ;
+
+}
