@@ -29,27 +29,28 @@
   display: inline-block;
   border: 1px solid black;
 }
-#color-palette {
-  position: absolute;
-  display: inline-block;
-  left: 43.5%;
-  top: 100px;
-}
-
 .pixel {
   background-color: white;
   height: 40px;
   width: 40px;
-  display: inline-block;
+  /* display: inline-block; */
   border: 1px solid black;
-  float: left;
+  float: left; 
 }
-#pixel-board {
-  position: absolute;
-  top: 200px;
-  left: 42.5%;
-  height: 210px;
-  width: 210px;
+#color-palette {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
   display: inline-block;
+  
+ }
+#pixel-board {
+  margin: auto;
   border: 1px solid blue;
+}
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
