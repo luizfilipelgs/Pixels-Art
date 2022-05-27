@@ -6,13 +6,11 @@ function gridInicial() {
 
 function criarGrid(inputGrid) {
   
-  
   let px = inputGrid * 40 + inputGrid * 2;
   let widthStyle = document.querySelector('#pixel-board');
   widthStyle.style.width = px + 'px';
   /* console.log(widthStyle); */
   
-
   let numeroPixel = inputGrid*inputGrid;
   /* console.log(`numero de pixels ${numeroPixel}`); 
   console.log(typeof inputGrid); */
@@ -21,9 +19,7 @@ function criarGrid(inputGrid) {
     let divPixel = document.createElement('div');
     document.getElementById('pixel-board').appendChild(divPixel);
     divPixel.classList = 'pixel';
-
   }
-
   escutadorPixel();
 }
 
@@ -42,11 +38,13 @@ function botão() {
       valorInput = 5
     } else if  (valorInput > 50) {
       valorInput = 50
-    } 
+    } else if (isNaN(valorInput)) {
+      window.alert("Board inválido!")
+      valorInput = 5
+    }
     console.log(valorInput);
       criarGrid(valorInput); 
        
-   
   }
   
 function escutadorPixel() {
