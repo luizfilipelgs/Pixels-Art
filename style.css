@@ -1,28 +1,55 @@
-#title {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+body{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  background: linear-gradient(68.15deg, #010247 16.62%, #8E5D52 85.61%);
+  background-image:url(https://i.pinimg.com/originals/4c/80/35/4c803592511d569cf589032e4811ec96.png)
+ 
+
 }
-#preto {
+.borda {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  
+  background-image:url(https://i.pinimg.com/originals/f4/ec/77/f4ec77cf11c48addf0f2529613b9c3d9.png)
+   
+   
+}
+#title {
+ 
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  
+  
+}
+#cor1 {
   background-color: black;
   height: 40px;
   width: 40px;
   display: inline-block;
   border: 1px solid black;
 }
-#cinza {
+#cor2 {
   background-color: gray;
   height: 40px;
   width: 40px;
   display: inline-block;
   border: 1px solid black;
 }
-#vermelho {
+#cor3 {
   background-color: red;
   height: 40px;
   width: 40px;
   display: inline-block;
   border: 1px solid black;
 }
-#verde {
+#cor4 {
   background-color: green;
   height: 40px;
   width: 40px;
@@ -36,20 +63,47 @@
   border: 1px solid black;
   float: left; 
 }
+
 #color-palette {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 20px;
   display: inline-block;
-  
+ 
  }
 #pixel-board {
   margin: auto;
+  margin-top: 15px;
   border: 1px solid black;
+
 }
-body{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+
+#inputs{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.borda2{
+  display: inline;
+  width: auto;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  
+}
+#board-size{
+  
+  width: 40.750px;
+  text-align: center;
+}
+#tamanhoInvalido{
+  text-align: center;
+  color: aliceblue;
+}
+
+.color{
+  border-radius: 100%;
 }

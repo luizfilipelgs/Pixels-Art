@@ -1,62 +1,90 @@
-    
-  function criarGrid(larguraGrid, alturaGrid) {
-    let px = larguraGrid * 40 + larguraGrid * 2;
-    let widthStyle = document.querySelector('#pixel-board');
-    widthStyle.style.width = px + 'px';
 
-    for (let i = 0; i < larguraGrid; i += 1) {
-      let linha = document.createElement('div');
-      document.getElementById('pixel-board').appendChild(linha);
-      linha.classList = 'pixel';
-
-      for (let i2 = 1; i2 < alturaGrid; i2 += 1) {
-        let coluna = document.createElement('div');
-        document.getElementById('pixel-board').appendChild(coluna);
-        coluna.classList = 'pixel';
-      }
-    }
-    escutadorPixel()
-  }
-
-  function escutadorPixel() {
-    let pixel = document.getElementsByClassName("pixel");
-    for (let index = 0; index < pixel.length; index+= 1) {
-     pixel[index].addEventListener("click", pintar);
-    
-    }
-      
-  }
-  criarGrid(5, 5);
-  let paletaCores = document.getElementsByClassName("color")
-
-  for (let index = 0; index < paletaCores.length; index++) {
-    paletaCores[index].addEventListener("click",escolherCor)
-
-  }
-
-
-  function escolherCor(event) {
-    console.log(event.target);
-    let target = event.target;
-    let select = document.getElementsByClassName("selected")[0];
-    select.classList.remove("selected");
-    target.classList.add("selected");
-    
-  }
-
-
-
-function pintar(event) {
-
-  let selected =  document.getElementsByClassName("selected")[0];
-  let cssTarget = window.getComputedStyle(selected);
-  console.log(cssTarget.backgroundColor);
-  let target =  event.target.style;
-  target.backgroundColor = cssTarget.backgroundColor;
-
+window.onload = gridInicial
+function gridInicial() {
+  criarGrid(5)
 }
 
-
-
-
+function criarGrid(inputGrid) {
   
+  
+  let px = inputGrid * 40 + inputGrid * 2;
+  let widthStyle = document.querySelector('#pixel-board');
+  widthStyle.style.width = px + 'px';
+  /* console.log(widthStyle); */
+  
+
+  let numeroPixel = inputGrid*inputGrid;
+  /* console.log(`numero de pixels ${numeroPixel}`); 
+  console.log(typeof inputGrid); */
+
+  for (let i = 0; i < numeroPixel; i += 1) {
+    let divPixel = document.createElement('div');
+    document.getElementById('pixel-board').appendChild(divPixel);
+    divPixel.classList = 'pixel';
+
+  }
+
+  escutadorPixel();
+}
+
+function botão() {
+  
+    let pixelSec = document.getElementById("pixel-board");
+    let pixel = document.getElementsByClassName("pixel");
+
+    pixelSec.innerHTML = ""
+
+    let input = document.querySelector('#board-size');
+    let valorInput = parseInt(input.value);
+    console.log(valorInput);
+
+    if (valorInput < 5) {
+      valorInput = 5
+    } else if  (valorInput > 50) {
+      valorInput = 50
+    } 
+    console.log(valorInput);
+      criarGrid(valorInput); 
+       
+   
+  }
+  
+function escutadorPixel() {
+  let pixel = document.getElementsByClassName('pixel');
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].addEventListener('click', pintar);
+  }
+}
+
+escutadorPaleta();
+function escutadorPaleta() {
+  let paletaCores = document.getElementsByClassName('color');
+  for (let index = 0; index < paletaCores.length; index++) {
+    paletaCores[index].addEventListener('click', escolherCor);
+  }
+}
+
+function escolherCor(event) {
+  console.log(event.target);
+  let target = event.target;
+  let select = document.getElementsByClassName('selected')[0];
+  select.classList.remove('selected');
+  target.classList.add('selected');
+}
+
+function pintar(event) {
+  let selected = document.getElementsByClassName('selected')[0];
+  let cssTarget = window.getComputedStyle(selected);
+  console.log(cssTarget.backgroundColor);
+  let target = event.target.style;
+  target.backgroundColor = cssTarget.backgroundColor;
+}
+
+function reset() {
+  console.log('Resetando Grid');
+  let pixel = document.getElementsByClassName('pixel');
+
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.backgroundColor = 'white';
+  }
+}
