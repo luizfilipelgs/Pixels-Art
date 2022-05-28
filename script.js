@@ -2,10 +2,7 @@
 window.onload = gridInicial
 function gridInicial() {
   criarGrid(5)
-  /* criarPaletaFixa() */
-  
-  criarPaletaAleatoria() 
-
+  criarPaletaFixa()
 }
 
 function criarGrid(inputGrid) {
@@ -28,10 +25,10 @@ function criarGrid(inputGrid) {
   
 }
 
-/* function criarPaletaFixa() {
+function criarPaletaFixa() {
   let secPaleta = document.getElementById("color-palette");
   
-  let coresFixas = ["blue","yellow","green"];
+  let coresFixas = ["white","blue","yellow","green","red"];
   
   for (let index = 0; index < coresFixas.length; index += 1) {
     let divCoresF = document.createElement("div");
@@ -39,21 +36,25 @@ function criarGrid(inputGrid) {
     divCoresF.classList = "color";
 
    secPaleta.appendChild(divCoresF);
+   
   } 
+  criarPaletaAleatoria();
+}
   
-}*/
+
 function criarPaletaAleatoria() {
+  let secPaleta = document.getElementById("color-palette");
   
-   for (let i = 0; i < 3; i += 1) {
-    let divPaleta = document.createElement('div');
-    document.getElementById('color-palette').appendChild(divPaleta);
-    divPaleta.classList = 'color';
-  }
+   for (let i = 0; i < 5 ; i += 1) {
+    let divCoresA = document.createElement('div');
+    secPaleta.appendChild(divCoresA);
+    divCoresA.classList = 'color';
+    }
   let coresPaleta = document.getElementsByClassName("color")
-  for (let index = 1; index < coresPaleta.length; index+= 1) {
-    
+  console.log(document.getElementsByClassName("color"));
+
+  for (let index = 6; index < coresPaleta.length; index+= 1) {
     coresPaleta[index].style.backgroundColor = corAleatoria();
-    
   }  
   escutadorPaleta();
 }  

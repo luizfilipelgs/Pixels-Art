@@ -25,8 +25,7 @@ body{
  
   text-align: center;
   font-family: 'Dancing Script', cursive;
-  
-
+  font-size: 3rem;
 }
 .color{
   height: 40px;
@@ -37,18 +36,6 @@ body{
 }
 #preto {
   background-color: black;
-}
-#cor2 {
-  background-color:blue;
-}
-#cor3 {
-  background-color: red;
-}
-#cor4 {
-  background-color: green;
-}
-#cor5 {
-  background-color: yellow;
 }
 .pixel {
   background-color: white;
