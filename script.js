@@ -2,6 +2,10 @@
 window.onload = gridInicial
 function gridInicial() {
   criarGrid(5)
+  /* criarPaletaFixa() */
+  
+  criarPaletaAleatoria() 
+
 }
 
 function criarGrid(inputGrid) {
@@ -21,6 +25,48 @@ function criarGrid(inputGrid) {
     divPixel.classList = 'pixel';
   }
   escutadorPixel();
+  
+}
+
+/* function criarPaletaFixa() {
+  let secPaleta = document.getElementById("color-palette");
+  
+  let coresFixas = ["blue","yellow","green"];
+  
+  for (let index = 0; index < coresFixas.length; index += 1) {
+    let divCoresF = document.createElement("div");
+    divCoresF.style.backgroundColor = coresFixas[index];
+    divCoresF.classList = "color";
+
+   secPaleta.appendChild(divCoresF);
+  } 
+  
+}*/
+function criarPaletaAleatoria() {
+  
+   for (let i = 0; i < 3; i += 1) {
+    let divPaleta = document.createElement('div');
+    document.getElementById('color-palette').appendChild(divPaleta);
+    divPaleta.classList = 'color';
+  }
+  let coresPaleta = document.getElementsByClassName("color")
+  for (let index = 1; index < coresPaleta.length; index+= 1) {
+    
+    coresPaleta[index].style.backgroundColor = corAleatoria();
+    
+  }  
+  escutadorPaleta();
+}  
+
+function corAleatoria() {
+  const letters = '0123456789ABCDEF';
+  let corX = '#';
+  
+  for (let i = 0; i < 6; i++) {
+    corX += letters[Math.floor(Math.random() * 16)];
+  }
+  return corX;
+  
 }
 
 function botão() {
@@ -54,7 +100,7 @@ function escutadorPixel() {
   }
 }
 
-escutadorPaleta();
+
 function escutadorPaleta() {
   let paletaCores = document.getElementsByClassName('color');
   for (let index = 0; index < paletaCores.length; index++) {
@@ -86,3 +132,6 @@ function reset() {
     pixel[index].style.backgroundColor = 'white';
   }
 }
+
+
+
