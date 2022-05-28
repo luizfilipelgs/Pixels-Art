@@ -1,6 +1,6 @@
 # Boas-vindas ao repositório do projeto Arte com Pixels!
 
-![Tela do Projeto](/tela projeto pixel art)
+![Tela do Projeto](/tela-projeto-pixel-art.png)
 
 ## O que foi desenvolvido 
 
@@ -13,7 +13,7 @@ Neste projeto, implementei um editor de arte com pixels em que a pessoa usuária
 
 - [x] 2 - Adicione à página uma paleta contendo quatro cores distintas.
 
-- [x] 3 - Adicione a cor **preta** como a primeira cor da paleta de cores.
+- [x] 3 - Adicione a cor preta como a primeira cor da paleta de cores.
 
 - [x] 4 - Adicione à página um quadro contendo 25 pixels.
 
