@@ -1,6 +1,6 @@
 # Boas-vindas ao repositório do projeto Arte com Pixels!
 
-![Tela do Projeto](/tela-projeto-pixel-art.png)
+![Tela do Projeto](/tela-projeto-pixel-art.jpeg)
 
 ## O que foi desenvolvido 
 
