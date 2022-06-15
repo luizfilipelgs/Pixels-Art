@@ -33,7 +33,7 @@ Neste projeto, implementei um editor de arte com pixels em que a pessoa usuária
 - [x] 9 - Crie um botão que retorne a cor do quadro para a cor inicial.
 
 
-# Requisitos Bônus - 100%
+## Requisitos Bônus - 100%
 
 
 - [x] 10 - Faça o quadro de pixels ter seu tamanho definido pela pessoa usuária.
