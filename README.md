@@ -4,7 +4,6 @@
 <br/>
 <br/>
 #### Link: https://luizfilipelgs.github.io/Pixels-Art/
-<br/>
 
 ## O que foi desenvolvido 
 
